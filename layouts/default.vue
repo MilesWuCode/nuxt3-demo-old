@@ -3,7 +3,9 @@
     <Navbar />
     <div class="flex">
       <Menu />
-      <slot />
+      <div>
+        <slot />
+      </div>
     </div>
   </div>
 </template>

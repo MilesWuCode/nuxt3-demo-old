@@ -2,7 +2,7 @@
 
 ```sh
 # 安裝
-yarn add -D tailwindcss postcss autoprefixer
+yarn add tailwindcss postcss autoprefixer
 
 # 生成 tailwind.config.js
 npx tailwindcss init

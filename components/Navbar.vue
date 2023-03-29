@@ -7,7 +7,7 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
-      <a class="btn btn-ghost normal-case text-xl">Nuxt3-Demo</a>
+      <NuxtLink to="/" class="btn btn-ghost normal-case text-xl">Nuxt3-Demo</NuxtLink>
     </div>
 
     <div class="justify-center flex-1 ">
