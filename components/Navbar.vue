@@ -10,7 +10,7 @@
       <NuxtLink to="/" class="btn btn-ghost normal-case text-xl">Nuxt3-Demo</NuxtLink>
     </div>
 
-    <div class="justify-center flex-1 ">
+    <div class="flex-1 justify-center">
       <label class="relative hidden sm:block w-full sm:max-w-sm">
         <span class="sr-only">Search</span>
         <span class="absolute inset-y-0 left-0 flex items-center pl-2">

@@ -3,7 +3,7 @@
     <Navbar />
     <div class="flex">
       <Menu />
-      <div>
+      <div class="w-full">
         <slot />
       </div>
     </div>
