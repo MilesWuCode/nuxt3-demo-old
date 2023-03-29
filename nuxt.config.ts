@@ -8,10 +8,8 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss'
   ],
 
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  },
+  typescript: {
+    strict: true,
+    typeCheck: true,
+  }
 });
