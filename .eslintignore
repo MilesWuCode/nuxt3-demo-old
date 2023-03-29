@@ -1,0 +1,5 @@
+.nuxt
+.output
+components.d.ts
+dist
+nuxt.d.ts
