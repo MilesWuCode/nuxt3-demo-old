@@ -1,10 +1,8 @@
 ## 1
 
 ```sh
-# 安裝
 yarn add tailwindcss postcss autoprefixer
 
-# 生成 tailwind.config.js
 npx tailwindcss init
 ```
 
@@ -51,7 +49,7 @@ module.exports = {
 @tailwind utilities;
 ```
 
-./nuxt.config.js
+./nuxt.config.ts
 
 ```diff
 export default defineNuxtConfig({

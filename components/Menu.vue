@@ -1,5 +1,5 @@
 <template>
-  <ul class="hidden md:block menu w-56">
+  <ul class="menu hidden w-56 md:block">
     <li>
       <NuxtLink to="/">index</NuxtLink>
     </li>

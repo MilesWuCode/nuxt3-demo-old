@@ -2,4 +2,19 @@
 
 - .editorconfig
 - .eslintignore
-- .prettierrc
+
+### prettier
+
+```sh
+yarn add prettier prettier-plugin-tailwindcss
+```
+
+./.prettierrc
+
+```json
+{
+  "semi": false,
+  "singleQuote": true,
+  "plugins": ["prettier-plugin-tailwindcss"]
+}
+```

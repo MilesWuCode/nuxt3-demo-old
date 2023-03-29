@@ -4,7 +4,9 @@ export default defineNuxtConfig({
     transpile: ['@headlessui/vue'],
   },
 
-  css: ['~/assets/css/main.css'],
+  modules: [
+    '@nuxtjs/tailwindcss'
+  ],
 
   postcss: {
     plugins: {
