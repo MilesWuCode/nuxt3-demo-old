@@ -1,5 +1,7 @@
-參考 https://github.com/viandwi24/nuxt3-awesome-starter
+### 參考
 
+- https://github.com/viandwi24/nuxt3-awesome-starter
+- https://github.com/lloydtao/nuxt-3-starter
 - .editorconfig
 - .eslintignore
 
