@@ -3,9 +3,9 @@ import Dialog from '~/components/Dialog.vue'
 </script>
 
 <template>
-  <h1 class="text-3xl m-2">headless ui</h1>
+  <h1 class="m-2 text-3xl">headless ui</h1>
 
-  <div class="flex justify-center w-full">
+  <div class="flex w-full justify-center">
     <Dialog />
   </div>
 </template>

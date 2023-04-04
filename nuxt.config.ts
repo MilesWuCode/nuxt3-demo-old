@@ -4,12 +4,10 @@ export default defineNuxtConfig({
     transpile: ['@headlessui/vue'],
   },
 
-  modules: [
-    '@nuxtjs/tailwindcss'
-  ],
+  modules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss'],
 
   typescript: {
     strict: true,
     typeCheck: true,
-  }
-});
+  },
+})

@@ -1,5 +1,3 @@
 <template>
-  <h1 class="text-3xl m-2">
-    tailwind css
-  </h1>
+  <h1 class="m-2 text-3xl">tailwind css</h1>
 </template>
