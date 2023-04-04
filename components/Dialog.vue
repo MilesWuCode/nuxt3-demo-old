@@ -10,7 +10,7 @@ import {
 } from '@headlessui/vue'
 
 const isOpen = ref(false)
-const title = 'a'
+// const title = 'a'
 function closeModal() {
   isOpen.value = false
 }

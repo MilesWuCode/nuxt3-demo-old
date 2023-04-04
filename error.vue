@@ -1,15 +1,13 @@
 <script setup lang="ts">
-type Props = {
+defineProps<{
   error: {
     statusCode: number
     message: string
   }
-}
-
-const props = defineProps<Props>()
+}>()
 </script>
 
 <template>
-  <h1 class="m-2 text-3xl">{{ props.error.statusCode }}</h1>
-  <p>{{ props.error.message }}</p>
+  <h1 class="m-2 text-3xl">{{ error.statusCode }}</h1>
+  <p>{{ error.message }}</p>
 </template>
