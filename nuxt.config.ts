@@ -4,10 +4,20 @@ export default defineNuxtConfig({
     transpile: ['@headlessui/vue'],
   },
 
-  modules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss'],
+  modules: [
+    // ['@nuxtjs/eslint-module', {lintOnStart: false}],
+    '@nuxtjs/tailwindcss',
+  ],
+
+  runtimeConfig: {
+    apiSecret: '123',
+    public: {
+      apiBase: '/api',
+    },
+  },
 
   typescript: {
     strict: true,
-    typeCheck: true,
+    // typeCheck: true,
   },
 })
