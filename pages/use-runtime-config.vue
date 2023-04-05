@@ -11,24 +11,26 @@ if (process.server) {
 </script>
 
 <template>
-  <h1 class="m-2 text-3xl">useRuntimeConfig</h1>
-  <div class="flex flex-col space-y-4">
-    <div>
-      <p>CSR</p>
-      <span>
-        config:
-        <pre>{{ cnf }}</pre>
-      </span>
-    </div>
-
-    <div>
-      <p>SSR進入頁面時有值 / SPA換頁時無值</p>
-      <p>
-        config.apiSecret:
+  <div>
+    <h1 class="m-2 text-3xl">useRuntimeConfig</h1>
+    <div class="flex flex-col space-y-4">
+      <div>
+        <p>CSR</p>
         <span>
-          {{ config.apiSecret }}
+          config:
+          <pre>{{ cnf }}</pre>
         </span>
-      </p>
+      </div>
+
+      <div>
+        <p>SSR進入頁面時有值 / SPA換頁時無值</p>
+        <p>
+          config.apiSecret:
+          <span>
+            {{ config.apiSecret }}
+          </span>
+        </p>
+      </div>
     </div>
   </div>
 </template>

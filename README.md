@@ -1,42 +1,9 @@
-# Nuxt 3 Minimal Starter
+# Nuxt3-Demo
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## 個人開發筆記
 
-## Setup
+## 參考
 
-Make sure to install the dependencies:
-
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- https://github.com/viandwi24/nuxt3-awesome-starter
+- https://github.com/lloydtao/nuxt-3-starter
+- https://ithelp.ithome.com.tw/articles/10306237
