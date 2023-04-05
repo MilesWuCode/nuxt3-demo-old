@@ -10,6 +10,7 @@ const menu: Link[] = [
   { name: 'headlessui', href: '/headlessui' },
   { name: 'useRuntimeConfig', href: '/use-runtime-config' },
   { name: 'pinia', href: '/pinia' },
+  { name: 'onErrorCaptured', href: '/on-error-captured' },
 ]
 </script>
 
