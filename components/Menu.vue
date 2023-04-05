@@ -9,6 +9,7 @@ const menu: Link[] = [
   { name: 'tailwindcss', href: '/tailwindcss' },
   { name: 'headlessui', href: '/headlessui' },
   { name: 'useRuntimeConfig', href: '/use-runtime-config' },
+  { name: 'pinia', href: '/pinia' },
 ]
 </script>
 

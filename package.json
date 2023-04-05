@@ -27,6 +27,8 @@
   "dependencies": {
     "@headlessui/vue": "^1.7.12",
     "@nuxtjs/tailwindcss": "^6.6.5",
-    "daisyui": "^2.51.5"
+    "@pinia/nuxt": "^0.4.7",
+    "daisyui": "^2.51.5",
+    "pinia": "^2.0.33"
   }
 }

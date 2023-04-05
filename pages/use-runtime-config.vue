@@ -15,16 +15,13 @@ if (process.server) {
   <div class="flex flex-col space-y-4">
     <div>
       <p>CSR</p>
-      <p>
+      <span>
         config:
-        <span>
-          {{ cnf }}
-        </span>
-      </p>
+        <pre>{{ cnf }}</pre>
+      </span>
     </div>
 
     <div>
-      ``
       <p>SSR進入頁面時有值 / SPA換頁時無值</p>
       <p>
         config.apiSecret:
