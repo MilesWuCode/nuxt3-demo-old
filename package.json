@@ -7,7 +7,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint --ext \".ts,.js,.vue\" --ignore-path .eslintignore ."
+    "lint": "eslint . --ext .vue,.ts,.js --ignore-path .eslintignore"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^12.0.0",
