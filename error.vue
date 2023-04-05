@@ -16,5 +16,5 @@ defineProps<{
 <template>
   <h1 class="m-2 text-3xl">{{ error.statusCode }}</h1>
   <p>{{ error.message }}</p>
-  <button @click="() => clearError({ redirect: '/' })">clearError</button>
+  <button @click="() => clearError({ redirect: '/' })">Back</button>
 </template>
