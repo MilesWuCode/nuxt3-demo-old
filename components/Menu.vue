@@ -11,6 +11,7 @@ const menu: Link[] = [
   { name: 'useRuntimeConfig', href: '/use-runtime-config' },
   { name: 'pinia', href: '/pinia' },
   { name: 'onErrorCaptured', href: '/on-error-captured' },
+  { name: 'todo', href: '/todo' },
 ]
 </script>
 
