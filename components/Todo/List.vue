@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { v4 as uuid } from 'uuid'
 import { type Todo, type Filter, useTodoStore } from '@/stores/todo'
 
 const store = useTodoStore()
@@ -13,7 +14,8 @@ const addTodo = () => {
   if (input.value.length === 0) return
 
   store.create({
-    id: new Date().getTime(),
+    // id: new Date().getTime(),
+    id: uuid(),
     content: input.value,
     state: 'active',
   })
