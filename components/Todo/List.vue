@@ -14,7 +14,6 @@ const addTodo = () => {
   if (input.value.length === 0) return
 
   store.create({
-    // id: new Date().getTime(),
     id: uuid(),
     content: input.value,
     state: 'active',
@@ -23,11 +22,11 @@ const addTodo = () => {
   input.value = ''
 }
 
-const changeState = (id: number, state: Todo['state']) => {
+const changeState = (id: string, state: Todo['state']) => {
   store.changeState(id, state)
 }
 
-const removeTodo = (id: number) => {
+const removeTodo = (id: string) => {
   store.remove(id)
 }
 </script>
@@ -53,8 +52,8 @@ const removeTodo = (id: number) => {
 
       <!-- select filter -->
       <button
-        v-for="(item, idx) of tabs"
-        :key="idx"
+        v-for="item of tabs"
+        :key="item"
         class="tab"
         :class="filter === item && 'tab-active'"
         @click="() => (filter = item)"

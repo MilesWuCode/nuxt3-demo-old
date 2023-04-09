@@ -1,21 +1,39 @@
-import { setActivePinia, createPinia } from 'pinia'
-import { describe, test, expect, beforeEach } from 'vitest'
+import { createPinia, setActivePinia } from 'pinia'
+import {
+  afterEach,
+  beforeAll,
+  beforeEach,
+  describe,
+  expect,
+  test,
+} from 'vitest'
+import { v4 as uuid } from 'uuid'
 import { useTodoStore } from './todo'
 
+beforeAll(() => {
+  setActivePinia(createPinia())
+})
+
 describe('useTodoStore', () => {
+  let store: ReturnType<typeof useTodoStore>
+
   beforeEach(() => {
-    setActivePinia(createPinia())
+    store = useTodoStore()
+  })
+
+  afterEach(() => {
+    store.$reset()
   })
 
   test('create,changeState,remove', () => {
-    const store = useTodoStore()
-
     expect(store.list.length).toBe(0)
 
     expect(store.total).toBe(0)
 
+    const id = uuid()
+
     store.create({
-      id: 1,
+      id,
       content: 'test',
       state: 'active',
     })
@@ -26,11 +44,11 @@ describe('useTodoStore', () => {
 
     expect(store.completedTotal).toBe(0)
 
-    store.changeState(1, 'completed')
+    store.changeState(id, 'completed')
 
     expect(store.completedTotal).toBe(1)
 
-    store.remove(1)
+    store.remove(id)
 
     expect(store.list.length).toBe(0)
 
@@ -40,16 +58,14 @@ describe('useTodoStore', () => {
   })
 
   test('filterByState', () => {
-    const store = useTodoStore()
-
     store.create({
-      id: 1,
+      id: uuid(),
       content: 'test',
       state: 'active',
     })
 
     store.create({
-      id: 2,
+      id: uuid(),
       content: 'test',
       state: 'completed',
     })

@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 
 export type Todo = {
-  id: number | string
+  id: string
   content: string
   state: 'active' | 'completed'
 }
@@ -37,7 +37,7 @@ export const useTodoStore = defineStore('todo', {
     create(todo: Todo) {
       this.list.push(todo)
     },
-    changeState(id: number, state: Todo['state']) {
+    changeState(id: string, state: Todo['state']) {
       // console.time('TestSpeed #1')
       for (const item of this.list) {
         if (item.id === id) {
@@ -53,7 +53,7 @@ export const useTodoStore = defineStore('todo', {
       // )
       // console.timeEnd('TestSpeed #2')
     },
-    remove(id: number) {
+    remove(id: string) {
       this.list = this.list.filter((item) => item.id !== id)
     },
   },
