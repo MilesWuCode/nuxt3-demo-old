@@ -66,8 +66,8 @@ const removeTodo = (id: number) => {
       <li v-for="item of store.filterByState(filter)" :key="item.id">
         <TodoItem
           :todo="item"
-          @change-state.once="changeState"
-          @remove-todo.once="removeTodo"
+          @change-state="changeState"
+          @remove-todo="removeTodo"
         />
       </li>
     </ul>
