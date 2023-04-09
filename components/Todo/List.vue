@@ -44,9 +44,12 @@ const removeTodo = (id: number) => {
       </div>
     </div>
 
-    <!-- filter -->
+    <!-- tabs -->
     <div class="tabs justify-around">
+      <!-- completed / total -->
       <span class="tab">{{ store.completedTotal }} / {{ store.total }}</span>
+
+      <!-- select filter -->
       <button
         v-for="(item, idx) of tabs"
         :key="idx"
