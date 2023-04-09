@@ -22,7 +22,8 @@ const onRemove = () => {
 </script>
 
 <template>
-  <label class="label justify-start">
+  <div class="flex space-x-2">
+    <!-- checkbox -->
     <input
       v-model="state"
       true-value="completed"
@@ -31,11 +32,16 @@ const onRemove = () => {
       class="checkbox flex-none"
       @change="onChange"
     />
-    <span
-      class="label-text grow"
+
+    <!-- content -->
+    <div
+      class="w-full grow break-words"
       :class="state === 'completed' && 'line-through'"
-      >{{ todo.content }}</span
     >
+      {{ todo.content }}
+    </div>
+
+    <!-- delete button -->
     <button class="btn-sm btn flex-none" @click="onRemove">Del</button>
-  </label>
+  </div>
 </template>

@@ -59,13 +59,9 @@ const removeTodo = (id: number) => {
     </div>
 
     <!-- list -->
-    <ul class="menu">
-      <li
-        v-for="item of store.filterByState(filter)"
-        :key="item.id"
-        class="p-3"
-      >
-        <TodoLabel
+    <ul class="space-y-2">
+      <li v-for="item of store.filterByState(filter)" :key="item.id">
+        <TodoItem
           :todo="item"
           @change-state.once="changeState"
           @remove-todo.once="removeTodo"

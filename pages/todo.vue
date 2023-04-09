@@ -10,6 +10,6 @@ definePageMeta({
 <template>
   <div>
     <h1 class="m-2 text-3xl">todo</h1>
-    <Todo class="mx-auto max-w-sm" />
+    <TodoList class="mx-auto max-w-sm" />
   </div>
 </template>
