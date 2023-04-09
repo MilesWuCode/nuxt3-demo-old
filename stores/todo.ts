@@ -6,6 +6,8 @@ export type Todo = {
   state: 'active' | 'completed'
 }
 
+export type Filter = 'all' | 'active' | 'completed'
+
 const play = {
   id: 1,
   content: 'play',
@@ -26,6 +28,12 @@ export const useTodoStore = defineStore('todo', {
           state === 'completed' ? (counter += 1) : counter,
         0
       ),
+    filterByState: (state) => {
+      return (filter: Filter) =>
+        filter === 'all'
+          ? state.list
+          : state.list.filter((item) => item.state === filter)
+    },
   },
   actions: {
     create(todo: Todo) {
@@ -34,7 +42,7 @@ export const useTodoStore = defineStore('todo', {
     remove(id: number) {
       this.list = this.list.filter((item) => item.id !== id)
     },
-    changeState(id: number, state: 'active' | 'completed') {
+    changeState(id: number, state: Todo['state']) {
       for (const item of this.list) {
         if (item.id === id) {
           item.state = state

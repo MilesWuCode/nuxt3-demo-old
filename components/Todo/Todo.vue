@@ -1,7 +1,33 @@
 <script setup lang="ts">
-import { useTodoStore } from '@/stores/todo'
+import { type Todo, type Filter, useTodoStore } from '@/stores/todo'
 
 const store = useTodoStore()
+
+const input = ref('')
+
+const tabs: Filter[] = ['all', 'active', 'completed']
+
+const filter = ref<Filter>(tabs[0])
+
+const addTodo = () => {
+  if (input.value.length === 0) return
+
+  store.create({
+    id: new Date().getTime(),
+    content: input.value,
+    state: 'active',
+  })
+
+  input.value = ''
+}
+
+const changeState = (id: number, state: Todo['state']) => {
+  store.changeState(id, state)
+}
+
+const removeTodo = (id: number) => {
+  store.remove(id)
+}
 </script>
 
 <template>
@@ -10,29 +36,40 @@ const store = useTodoStore()
     <div class="form-control">
       <div class="input-group">
         <input
+          v-model.trim="input"
           type="text"
-          placeholder="Search…"
           class="input-bordered input w-full"
         />
-        <button class="btn-square btn">add</button>
+        <button class="btn-square btn" @click="addTodo">add</button>
       </div>
     </div>
 
     <!-- filter -->
     <div class="tabs justify-around">
       <span class="tab">{{ store.completedTotal }} / {{ store.total }}</span>
-      <button class="tab tab-active">All</button>
-      <button class="tab">Active</button>
-      <button class="tab">Completed</button>
+      <button
+        v-for="(item, idx) of tabs"
+        :key="idx"
+        class="tab"
+        :class="filter === item && 'tab-active'"
+        @click="() => (filter = item)"
+      >
+        {{ item }}
+      </button>
     </div>
 
     <!-- list -->
     <ul class="menu">
-      <li v-for="item of store.list" :key="item.id" class="p-3">
-        <label class="label justify-start">
-          <input type="checkbox" class="checkbox" />
-          <span class="label-text">Remember me</span>
-        </label>
+      <li
+        v-for="item of store.filterByState(filter)"
+        :key="item.id"
+        class="p-3"
+      >
+        <TodoLabel
+          :todo="item"
+          @change-state.once="changeState"
+          @remove-todo.once="removeTodo"
+        />
       </li>
     </ul>
   </div>
