@@ -8,12 +8,6 @@ export type Todo = {
 
 export type Filter = 'all' | 'active' | 'completed'
 
-const play = {
-  id: 1,
-  content: 'play',
-  state: 'active',
-}
-
 type TodoState = {
   list: Todo[]
 }
@@ -21,7 +15,7 @@ type TodoState = {
 export const useTodoStore = defineStore('todo', {
   state: (): TodoState => {
     return {
-      list: [play] as Todo[],
+      list: [] as Todo[],
     }
   },
   getters: {
@@ -43,9 +37,6 @@ export const useTodoStore = defineStore('todo', {
     create(todo: Todo) {
       this.list.push(todo)
     },
-    remove(id: number) {
-      this.list = this.list.filter((item) => item.id !== id)
-    },
     changeState(id: number, state: Todo['state']) {
       // console.time('TestSpeed #1')
       for (const item of this.list) {
@@ -61,6 +52,9 @@ export const useTodoStore = defineStore('todo', {
       //   item.id === id ? { ...item, state } : item
       // )
       // console.timeEnd('TestSpeed #2')
+    },
+    remove(id: number) {
+      this.list = this.list.filter((item) => item.id !== id)
     },
   },
 })
