@@ -17,7 +17,7 @@ const menu: Link[] = [
 
 <template>
   <ul class="menu hidden w-56 md:block">
-    <li v-for="item of menu" :key="item.href">
+    <li v-for="item of menu" :key="item.href" :data-testid="item.name">
       <NuxtLink :to="item.href">{{ item.name }}</NuxtLink>
     </li>
   </ul>
