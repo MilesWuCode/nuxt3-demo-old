@@ -15,6 +15,11 @@ configure({
     ja,
     zhTW,
   }),
+  // 驗證時機,限<Field />使用
+  // validateOnInput: true,
+  // validateOnChange: true,
+  // validateOnBlur: true,
+  // validateOnModelUpdate: true,
 })
 
 setLocale('zhTW')
