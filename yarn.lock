@@ -1158,6 +1158,27 @@
     hookable "^5.5.3"
     unhead "1.1.26"
 
+"@vee-validate/i18n@^4.8.6":
+  version "4.8.6"
+  resolved "https://registry.yarnpkg.com/@vee-validate/i18n/-/i18n-4.8.6.tgz#bfae327ae5f76e35a852ae6df0104853d564b984"
+  integrity sha512-yvmCm5nf9MnuvMBboGAjHoqCkcLP0APbk690SyabcpcEgxisAI276aSCJ0SxKxRafoptw3HImXFDbjezQqUYTg==
+
+"@vee-validate/rules@^4.8.6":
+  version "4.8.6"
+  resolved "https://registry.yarnpkg.com/@vee-validate/rules/-/rules-4.8.6.tgz#cdde61fe442b7b11c6fe93c505bd28b2d3d8c9fb"
+  integrity sha512-AswolP0nx5qWq1pArsGemFF6sCjH6D4x/GBxKlGl7qwNqtAtwRgsekk9OVRdF9vrWQ+l9fH2lC3hqj+J7FmUmA==
+  dependencies:
+    vee-validate "^4.8.6"
+
+"@vee-validate/zod@^4.8.6":
+  version "4.8.6"
+  resolved "https://registry.yarnpkg.com/@vee-validate/zod/-/zod-4.8.6.tgz#66a9a28149be3d419331fdc7cc1ae7efb7d4b460"
+  integrity sha512-BG9UI0XleYXVphD462unkwwWsKiNqPwzoWaZh3YMU7VeZhcIbOQt3+derqhDdoIn5+C+Yj6o6n3NUtsKOrjOlQ==
+  dependencies:
+    type-fest "^3.6.1"
+    vee-validate "^4.8.6"
+    zod "^3.21.4"
+
 "@vercel/nft@^0.22.6":
   version "0.22.6"
   resolved "https://registry.yarnpkg.com/@vercel/nft/-/nft-0.22.6.tgz#edb30d300bb809c0945ea4c7b87e56f634885541"
@@ -7089,7 +7110,7 @@ type-fest@^2.11.2:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-2.19.0.tgz#88068015bb33036a598b952e55e9311a60fd3a9b"
   integrity sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==
 
-type-fest@^3.0.0:
+type-fest@^3.0.0, type-fest@^3.6.1:
   version "3.10.0"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-3.10.0.tgz#d75f17a22be8816aea6315ab2739fe1c0c211863"
   integrity sha512-hmAPf1datm+gt3c2mvu0sJyhFy6lTkIGf0GzyaZWxRLnabQfPUqg6tF95RPg6sLxKI7nFLGdFxBcf2/7+GXI+A==
@@ -7292,6 +7313,13 @@ vary@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==
+
+vee-validate@^4.8.6:
+  version "4.8.6"
+  resolved "https://registry.yarnpkg.com/vee-validate/-/vee-validate-4.8.6.tgz#918a89a7d0e39d0efc44ce5ea7cd3c427f467373"
+  integrity sha512-d8SS1mfFn3qv/QRwy9BQ/0ZmoxQT37zG7zERUSK5NvmI7gx7IbQxOIXtyYVEPaDJNI4QWopBe48q91pAQqwetA==
+  dependencies:
+    "@vue/devtools-api" "^6.5.0"
 
 vite-node@0.30.1, vite-node@^0.30.1:
   version "0.30.1"
@@ -7749,3 +7777,8 @@ zip-stream@^4.1.0:
     archiver-utils "^2.1.0"
     compress-commons "^4.1.0"
     readable-stream "^3.6.0"
+
+zod@^3.21.4:
+  version "3.21.4"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-3.21.4.tgz#10882231d992519f0a10b5dd58a38c9dabbb64db"
+  integrity sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==

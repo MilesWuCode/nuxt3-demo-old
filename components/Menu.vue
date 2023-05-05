@@ -12,6 +12,7 @@ const menu: Link[] = [
   { name: 'pinia', href: '/pinia' },
   { name: 'onErrorCaptured', href: '/on-error-captured' },
   { name: 'todo', href: '/todo' },
+  { name: 'form', href: '/form' },
 ]
 </script>
 

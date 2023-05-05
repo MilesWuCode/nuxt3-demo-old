@@ -37,8 +37,13 @@
     "@headlessui/vue": "^1.7.12",
     "@nuxtjs/tailwindcss": "^6.6.5",
     "@pinia/nuxt": "^0.4.7",
+    "@vee-validate/i18n": "^4.8.6",
+    "@vee-validate/rules": "^4.8.6",
+    "@vee-validate/zod": "^4.8.6",
     "daisyui": "^2.51.5",
     "pinia": "^2.0.33",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "vee-validate": "^4.8.6",
+    "zod": "^3.21.4"
   }
 }
