@@ -13,6 +13,7 @@ const menu: Link[] = [
   { name: 'onErrorCaptured', href: '/on-error-captured' },
   { name: 'todo', href: '/todo' },
   { name: 'form', href: '/form' },
+  { name: 'fetch', href: '/fetch' },
 ]
 </script>
 
