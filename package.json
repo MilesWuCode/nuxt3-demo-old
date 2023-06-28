@@ -12,6 +12,7 @@
     "coverage": "vitest run --coverage"
   },
   "devDependencies": {
+    "@nuxt/devtools": "latest",
     "@nuxt/test-utils": "^3.3.3",
     "@nuxtjs/eslint-config": "^12.0.0",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
@@ -26,7 +27,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vitest": "^0.0.57",
     "jsdom": "^21.1.1",
-    "nuxt": "^3.3.2",
+    "nuxt": "^3.6.1",
     "prettier": "^2.8.7",
     "prettier-plugin-tailwindcss": "^0.2.6",
     "typescript": "^5.0.3",
@@ -35,8 +36,9 @@
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.12",
-    "@nuxtjs/tailwindcss": "^6.6.5",
+    "@nuxtjs/tailwindcss": "^6.8.0",
     "@pinia/nuxt": "^0.4.7",
+    "@types/node": "^18",
     "@vee-validate/i18n": "^4.8.6",
     "@vee-validate/rules": "^4.8.6",
     "@vee-validate/zod": "^4.8.6",
